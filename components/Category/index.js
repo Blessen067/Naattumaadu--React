@@ -7,7 +7,7 @@ const Category = (props) => {
         window.scrollTo(10, 0);
     }
     return (
-        <section className="category-area section-padding">
+        <section className="category-area section-padding" >
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6">

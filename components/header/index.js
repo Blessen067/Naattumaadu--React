@@ -61,7 +61,7 @@ class Header extends Component {
             <div className="row">
               <div className="col-lg-2 col-sm-0 ms-0">
                 <div className="navbar-header">
-                  <Link onClick={ClickHandler} href="/home2" className="navbar-brand ms-2">
+                  <Link onClick={ClickHandler} href="/" className="navbar-brand ms-2">
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                       <img src='/images/milk/cowlogo.png' style={{ width: '60px' }} alt="icon" />
                       <h2 style={{ marginLeft: '0px', marginBottom: '0' }}>NaattuMaadu</h2>
@@ -73,7 +73,7 @@ class Header extends Component {
                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                   <ul className="nav navbar-nav me-auto mb-2 ms-3 mb-lg-0" style={{ display: 'flex', alignItems: 'center' }}>
                     <li>
-                      <Link onClick={ClickHandler} className="" href="/home2">
+                      <Link onClick={ClickHandler} className="" href="/">
                         NAATTULIFE
                       </Link>
                     </li>
