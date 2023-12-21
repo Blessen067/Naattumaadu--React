@@ -5,23 +5,28 @@ import Button from "@mui/material/Button";
 
 import 'react-medium-image-zoom/dist/styles.css'
 import Link from 'next/link'
-
 const Product = ({ item, addToCart }) => {
- 
   const [qty, setQty] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(null); // New state for selected size
   const [totalPrices, setTotalPrices] = useState(item.price);
-
   const calculateTotalPrice = () => {
     const basePrice = item.price;
     const totalPrices = basePrice * qty;
     setTotalPrices(totalPrices);
-    console.log(totalPrices);
-
   };
 
   useEffect(() => {
     calculateTotalPrice();
   }, [qty, item.price]);
+
+  // Function to handle size selection
+  const handleSizeChange = (size) => {
+    setSelectedSize(size);
+    // Calculate total price based on the selected size and quantity
+    const totalPrices = size.price * qty;
+    setTotalPrices(totalPrices);
+  };
+  console.log("size", item.size)
   return (
 
     <div className="product-details">
@@ -34,8 +39,6 @@ const Product = ({ item, addToCart }) => {
                   <img
                     alt="Ghee in Single Product view"
                     src={item.image}
-                    // src="https://media.istockphoto.com/id/878155310/photo/desi-pure-ghee-or-clarified-butter-in-glass-or-copper-container-with-spoon-selective-focus.jpg?s=612x612&w=0&k=20&c=gpImYns7p8sfNWt39597A2_SNv0xQAC2SfyYBGwDnv4="
-
                     width="500"
                   />
                 </Zoom>
@@ -69,24 +72,23 @@ const Product = ({ item, addToCart }) => {
             <div className="product-filter-item color filter-size">
               <div className="color-name">
                 <span>Weight :</span>
-                <ul>
-                  <li className="color">
-                    <input id="wa1" type="radio" name="size" value="30" />
-                    <label htmlFor="wa1">2L</label>
-                  </li>
-                  <li className="color">
-                    <input id="wa2" type="radio" name="size" value="30" />
-                    <label htmlFor="wa2">1L</label>
-                  </li>
-                  <li className="color">
-                    <input id="wa3" type="radio" name="size" value="30" />
-                    <label htmlFor="wa3">500ML</label>
-                  </li>
-                  <li className="color">
-                    <input id="wa4" type="radio" name="size" value="30" />
-                    <label htmlFor="wa4">200ML</label>
-                  </li>
-                </ul>
+                {item && item.size.map((size, index) => (
+                  <React.Fragment key={index}>
+                    <ul>
+                      <li className="color">
+                        <input
+                          id={`wa${index + 1}`}
+                          type="radio"
+                          name="size"
+                          value={size.weight}
+                          checked={selectedSize === size} // Check if the size is selected
+                          onChange={() => handleSizeChange(size)} // Handle size change
+                        />
+                        <label htmlFor={`wa${index + 1}`}>{size.weight}</label>
+                      </li>
+                    </ul>
+                  </React.Fragment>
+                ))}
               </div>
             </div>
             <div className="pro-single-btn">

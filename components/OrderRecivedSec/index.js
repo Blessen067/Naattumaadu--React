@@ -25,7 +25,7 @@ const OrderRecivedSec = ({cartList}) => {
                                             <TableBody>
                                                 {cartList.map(item => (
                                                     <TableRow key={item.id}>
-                                                        <TableCell><img src={item.proImg} alt="" /> {item.title} ₹{item.price} x {item.qty}</TableCell>
+                                                        <TableCell><img src={item.image} alt="" /><b>{item.name}</b>  ₹{item.price} x {item.qty}</TableCell>
                                                         <TableCell
                                                             align="right">₹{item.qty * item.price}</TableCell>
                                                     </TableRow>

@@ -467,7 +467,7 @@ const CheckoutSection = ({cartList}) => {
                                             <TableBody>
                                                 {cartList.map(item => (
                                                     <TableRow key={item.id}>
-                                                        <TableCell>{item.name} ₹{item.price} x {item.qty}</TableCell>
+                                                        <TableCell><b>{item.name}</b> ₹{item.price} x {item.qty}</TableCell>
                                                         <TableCell
                                                             align="right">₹{item.qty * item.price}</TableCell>
                                                     </TableRow>

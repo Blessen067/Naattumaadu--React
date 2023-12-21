@@ -17,11 +17,7 @@ const ProductSinglePage = (props) => {
     const [products, setProducts] = useState([]);
 
     const [product, setProduct] = useState(null);
-
     const { id } = router.query;
-
-    console.log("id", id)
-
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -44,11 +40,7 @@ const ProductSinglePage = (props) => {
         addToCart(product, qty);
     };
 
-
     const { addToCart } = props;
-
-
-
     const item = product && product;
 
     console.log("item", item)
