@@ -8,7 +8,7 @@ const TermsPage = () => {
             <div className="container mt-3">
                 <div className="d-flex justify-content-center">
                     <h1 >WELCOME TO NAATUMAADU!</h1>
-                </div>
+                </div><br/>
 
                 <p>By accessing this website, we assume you accept these terms and conditions.
                     Please do not continue to use Naatumaadu if you do not agree to take
@@ -113,7 +113,7 @@ const TermsPage = () => {
                 <li>Online directory distributors;</li>
                 <li>Internet portals;</li>
                 <li>Accounting, law, and consulting firms;</li>
-                <li>Educational institutions and trade associations.</li>
+                <li>Educational institutions and trade associations.</li><br/>
 
                 <h4>IFRAMES</h4>
                 <p>Without prior approval and written permission, you may not create frames around our Webpages

@@ -29,90 +29,40 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
 
 
         <div className="product-wrap">
-          <div className="row align-items-center">
+          <div className="row">
             {products.length > 0 &&
               products.map((product, pitem) => (
-                <Link href={`/product-single/${product.id}`} >
-                  <div
-                    className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
-                    key={pitem}
-                  >
-                    <div className="product-item">
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-3" key={pitem}>
+                  <div className="product-item">
+                    <Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.id}`}>
                       <div className="product-img">
-                        <img src={product.proImg} alt="" />
-                        <ul>
-                          <li>
-                            <button
-                              data-bs-toggle="tooltip"
-                              data-bs-html="true"
-                              title="Add to Cart"
-                              onClick={() => addToCartProduct(product)}
-                            >
-                              <i className="fi flaticon-shopping-cart"></i>
-                            </button>
-                          </li>
-                          <li>
-                            {/* <DefaultModal /> */}
-                          </li>
-                          <li>
-                            <button
-                              data-bs-toggle="tooltip"
-                              data-bs-html="true"
-                              title="Add to Cart"
-                              onClick={() => addToWishListProduct(product)}
-                            >
-                              <i className="fi flaticon-like"></i>
-                            </button>
-                          </li>
-                        </ul>
-                        {/* <div className="offer-thumb">
-                    <span>{product.offer}</span>
-                  </div> */}
+                        <img 
+                        src={product.image} 
+                        // src="https://media.istockphoto.com/id/878155310/photo/desi-pure-ghee-or-clarified-butter-in-glass-or-copper-container-with-spoon-selective-focus.jpg?s=612x612&w=0&k=20&c=gpImYns7p8sfNWt39597A2_SNv0xQAC2SfyYBGwDnv4="
+
+                        alt="" />
                       </div>
-                      <div className="product-content">
-                        <h3 style={{marginLeft:"110px",fontSize:'30px'}}>
+                      <div className="product-content ">
+                        <h3 className="d-flex justify-content-center">
                           {product.name}
                         </h3>
-                        <div className="product-btm">
-                          <div className="product-price">
-                            <ul style={{marginLeft:'130px',fontSize:'20px'}}>
-                              <li >₹ {product.price}</li>
-                              <li></li>
-                            </ul>
-                          </div>
-
-                          {/* <div className="product-ratting">
-                            <ul>
-                              <li>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                              </li>
-                              <li>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                              </li>
-                              <li>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                              </li>
-                              <li>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                              </li>
-                              <li>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                              </li>
-                            </ul>
-                          </div> */}
+                        <div className="product-btm d-flex justify-content-center">
+                          <p style={{ color: "orange", fontWeight: "bold" }}>₹ {product.price}</p>
                         </div>
-                        <div className="mt-2" style={{ marginLeft: "70px" }}>
-                          <Link onClick={ClickHandler} href="/shop" className="btn theme-btn ms-4  ">
+
+                        <div className="mt-2 d-flex justify-content-center">
+                          <Link onClick={ClickHandler} href="/shop" className="btn theme-btn   ">
                             Buy Now
                           </Link>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
-                </Link>
+                </div>
               ))}
           </div>
-        </div >
+        </div>
+
       </div >
     </section >
   );

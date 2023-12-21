@@ -19,17 +19,18 @@ const submitHandler = (e) => {
 
 
 const CartPage = (props) => {
-
+    console.log('Carts from props:', Cart);
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     };
 
     const { carts } = props;
-
+    
     return (
+        <>
         <Fragment>
-            <Navbar hClass={"header-style-2"} />
-            <PageTitle pageTitle='QUILL & PLATTER' pagesub="QUILL & PLATTER" />
+            <Navbar  />
+            <PageTitle pageTitle='Cart' pagesub="Cart" />
             <div className="cart-area section-padding">
                 <div className="container">
                     <div className="form">
@@ -51,18 +52,19 @@ const CartPage = (props) => {
                                             <tbody>
                                                 {carts &&
                                                     carts.length > 0 &&
-                                                    carts.map((catItem, crt) => (
+                                                    carts.map((cartItem, crt) => (
+                                                       
                                                         <tr key={crt}>
                                                             <td className="images">
-                                                                <img src={catItem.proImg} alt="" />
+                                                                <img src={cartItem.image} alt="" />
                                                             </td>
                                                             <td className="product">
                                                                 <ul>
                                                                     <li className="first-cart">
-                                                                        {catItem.title}
+                                                                        {cartItem.name}
                                                                     </li>
-                                                                    <li>Brand : {catItem.brand}</li>
-                                                                    <li>Size : {catItem.size}</li>
+                                                                    <li>Brand : {cartItem.brand}</li>
+                                                                    <li>Size : {cartItem.size}</li>
                                                                 </ul>
                                                             </td>
                                                             <td className="stock">
@@ -71,16 +73,16 @@ const CartPage = (props) => {
                                                                         <Button
                                                                             className="dec qtybutton"
                                                                             onClick={() =>
-                                                                                props.decrementQuantity(catItem.id)
+                                                                                props.decrementQuantity(cartItem.id)
                                                                             }
                                                                         >
                                                                             -
                                                                         </Button>
-                                                                        <input value={catItem.qty} type="text" />
+                                                                        <input value={cartItem.qty} type="text" />
                                                                         <Button
                                                                             className="inc qtybutton"
                                                                             onClick={() =>
-                                                                                props.incrementQuantity(catItem.id)
+                                                                                props.incrementQuantity(cartItem.id)
                                                                             }
                                                                         >
                                                                             +
@@ -88,13 +90,13 @@ const CartPage = (props) => {
                                                                     </Grid>
                                                                 </div>
                                                             </td>
-                                                            <td className="ptice">${catItem.qty * catItem.price}</td>
-                                                            <td className="stock">${catItem.qty * catItem.price}</td>
+                                                            <td className="price">₹{cartItem.qty * cartItem.price}</td>
+                                                            <td className="stock">₹{cartItem.qty * cartItem.price}</td>
                                                             <td className="action">
                                                                 <ul>
                                                                     <li
                                                                         onClick={() =>
-                                                                            props.removeFromCart(catItem.id)
+                                                                            props.removeFromCart(cartItem.id)
                                                                         }
                                                                     >
                                                                         <i className="fi ti-trash"></i>
@@ -128,19 +130,19 @@ const CartPage = (props) => {
                                                 Total product<span>( {carts.length} )</span>
                                             </li>
                                             <li>
-                                                Sub Price<span>${totalPrice(carts)}</span>
+                                                Sub Price<span>₹{totalPrice(carts)}</span>
                                             </li>
                                             <li>
-                                                Vat<span>$0</span>
+                                                Vat<span>₹0</span>
                                             </li>
                                             <li>
-                                                Eco Tax<span>$0</span>
+                                                Eco Tax<span>₹0</span>
                                             </li>
                                             <li>
-                                                Delivery Charge<span>$0</span>
+                                                Delivery Charge<span>₹0</span>
                                             </li>
                                             <li className="cart-b">
-                                                Total Price<span>${totalPrice(carts)}</span>
+                                                Total Price<span>₹{totalPrice(carts)}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -166,6 +168,7 @@ const CartPage = (props) => {
             <Footer />
             <Scrollbar />
         </Fragment>
+        </>
     )
 };
 

@@ -56,7 +56,7 @@ const ProductSinglePage = (props) => {
     return (
         <Fragment>
             <Navbar />
-            <PageTitle pageTitle={"Product Detail"} pagesub={item?.title} />
+            <PageTitle pageTitle={"Product Detail"} pagesub={"Fruits"} />
             <section className="product-single-section section-padding">
                 <div className="container">
                     {item ? <Product

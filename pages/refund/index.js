@@ -9,7 +9,7 @@ const Refund =(props)=>{
     return(
    <>
         <Navbar/>
-        <PageTitle pageTitle={' Refund - Policy'} pagesub={' REFUND POLICY'}/>
+        <PageTitle pageTitle={' Refund Policy'} pagesub={' Refund Policy'}/>
         <RefundPage/>
         <Footer/>
         <Scrollbar/>

@@ -437,9 +437,9 @@ const CheckoutSection = ({cartList}) => {
                                                 {cardType.map((item, i) => (
                                                     <Grid
                                                         key={i}
-                                                        className={`cardItem ${forms.card_type === item.title ? 'active' : null}`}
-                                                        onClick={() => setForms({...forms, card_type: item.title})}>
-                                                        <img src={item.img} alt={item.title}/>
+                                                        className={`cardItem ${forms.card_type === item.name ? 'active' : null}`}
+                                                        onClick={() => setForms({...forms, card_type: item.name})}>
+                                                        <img src={item.image} alt={item.name}/>
                                                     </Grid>
                                                 ))}
                                             </Grid>
@@ -467,9 +467,9 @@ const CheckoutSection = ({cartList}) => {
                                             <TableBody>
                                                 {cartList.map(item => (
                                                     <TableRow key={item.id}>
-                                                        <TableCell>{item.title} ${item.price} x {item.qty}</TableCell>
+                                                        <TableCell>{item.name} ₹{item.price} x {item.qty}</TableCell>
                                                         <TableCell
-                                                            align="right">${item.qty * item.price}</TableCell>
+                                                            align="right">₹{item.qty * item.price}</TableCell>
                                                     </TableRow>
                                                 ))}
                                                 <TableRow className="totalProduct">
@@ -478,12 +478,12 @@ const CheckoutSection = ({cartList}) => {
                                                 </TableRow>
                                                 <TableRow>
                                                     <TableCell>Sub Price</TableCell>
-                                                    <TableCell align="right">${totalPrice(cartList)}</TableCell>
+                                                    <TableCell align="right">₹{totalPrice(cartList)}</TableCell>
                                                 </TableRow>
                                                 <TableRow>
                                                     <TableCell>Total Price</TableCell>
                                                     <TableCell
-                                                        align="right">${totalPrice(cartList)}</TableCell>
+                                                        align="right">₹{totalPrice(cartList)}</TableCell>
                                                 </TableRow>
                                             </TableBody>
                                         </Table>

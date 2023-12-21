@@ -51,7 +51,7 @@ class Header extends Component {
     const handleLogout = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-      router.push("login "); // Redirect to the home page after logout
+      router.push("/login "); // Redirect to the home page after logout
     };
 
     return (
@@ -149,13 +149,13 @@ class Header extends Component {
                             <div className="mini-cart-item clearfix" key={i}>
                               <div className="mini-cart-item-image">
                                 <span>
-                                  <img src={cart.proImg} alt="icon" />
+                                  <img src={cart.image} alt="icon" />
                                 </span>
                               </div>
                               <div className="mini-cart-item-des">
-                                <p>{cart.title} </p>
+                                <p>{cart.name} </p>
                                 <span className="mini-cart-item-price">
-                                  ${cart.price} x {" "} {cart.qty}
+                                ₹{cart.price} x {" "} {cart.qty}
                                 </span>
                                 <span className="mini-cart-item-quantity">
                                   <button
@@ -173,7 +173,7 @@ class Header extends Component {
                       </div>
                       <div className="mini-cart-action clearfix">
                         <span className="mini-checkout-price">
-                          Total: ${totalPrice(carts)}
+                          Total: ₹{totalPrice(carts)}
                         </span>
                         <div className="mini-btn">
                           <Link onClick={ClickHandler} href="/checkout" className="view-cart-btn s1">
@@ -214,13 +214,13 @@ class Header extends Component {
                             <div className="mini-cart-item clearfix" key={i}>
                               <div className="mini-cart-item-image">
                                 <span>
-                                  <img src={wish.proImg} alt="icon" />
+                                  <img src={wish.image} alt="icon" />
                                 </span>
                               </div>
                               <div className="mini-cart-item-des">
-                                <p>{wish.title} </p>
+                                <p>{wish.name} </p>
                                 <span className="mini-cart-item-price">
-                                  ${wish.price}
+                                ₹{wish.price}
                                 </span>
                                 <span className="mini-cart-item-quantity">
                                   <button
@@ -238,7 +238,7 @@ class Header extends Component {
                       </div>
                       <div className="mini-cart-action clearfix">
                         <span className="mini-checkout-price">
-                          Total: ${totalwishlistprice}
+                          Total: ₹{totalwishlistprice}
                         </span>
                         <div className="mini-btn">
                           <Link onClick={ClickHandler} href="/checkout" className="view-cart-btn s1">

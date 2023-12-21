@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Link from 'next/link'
-
+import '../../styles/hero2.module.css'
 
 const Hero2 = () => {
 
@@ -37,11 +37,10 @@ const Hero2 = () => {
                             <div className="row  ">
                                 <div className=" slide-caption">
                                     <div className="slide-title">
-                                        <div className="bd-hero__content z-index-11 " >
+                                        <div className="bd-hero__content z-index-11 " style={{}}>
                                             <span data-animation="fadeInUp" data-delay=".3s">Get everytime fresh assets</span>
-                                            <h2 data-animation="fadeInUp" data-delay=".5s">fresh Ghee</h2>
-                                            {/* <p data-animation="fadeInUp" data-delay=".7s">Dairy producers worldwide face similar challenges around animal welfare, farm<br />
-                                                profitability, food safety, and work efficiency.</p> */}
+                                            <h2  data-animation="fadeInUp" data-delay=".5s">fresh Ghee</h2>
+                                           
                                         </div>
                                     </div>
                                     <div className="btns"  style={{marginBottom:"100px"}}>

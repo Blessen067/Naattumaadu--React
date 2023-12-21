@@ -18,7 +18,6 @@ const CheckoutPage =({cartList}) => {
     return (
         <Fragment>
             <Navbar hClass={"header-style-2"} />
-            <PageTitle pageTitle='Checkout' pagesub="Checkout" />
             <CheckoutSection cartList={cartList}/>
             <Footer />
             <Scrollbar/>

@@ -61,7 +61,7 @@ const LoginPage = (props) => {
                 const userData = await login(email, password);
                 console.log('Login successful:', userData.userdetails);
 
-                router.push('/home2');
+                router.push('/');
             } catch (error) {
                 toast.error(error.message);
             }

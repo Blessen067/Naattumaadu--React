@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react';
 import { connect } from "react-redux";
 import OrderRecivedSec from '../../components/OrderRecivedSec';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/footer';
+import Scrollbar from '../../components/scrollbar';
+import PageTitle from '../../components/pagetitle';
 
 
 const OrderRecived = ({ cartList }) => {
@@ -8,7 +12,10 @@ const OrderRecived = ({ cartList }) => {
 
     return (
         <Fragment>
+            <Navbar/>
             <OrderRecivedSec cartList={cartList} />
+            <Footer />
+            <Scrollbar/>
         </Fragment>
     )
 };

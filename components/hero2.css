@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Default styles for larger screens */
+
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768 pixels (adjust as needed) */
+
+    .hero {
+        margin-bottom: 0; /* Adjust margin for mobile view */
+    }
+
+    .slide-inner {
+        background-size: cover; /* Adjust background size for mobile view */
+        margin-bottom: 30px; /* Adjust margin for mobile view */
+    }
+
+    .slide-title h2 {
+        font-size: 40px; /* Adjust font size for mobile view */
+    }
+
+    .btns {
+        margin-bottom: 50px; /* Adjust margin for mobile view */
+    }
+}

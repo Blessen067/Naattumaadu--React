@@ -25,9 +25,9 @@ const OrderRecivedSec = ({cartList}) => {
                                             <TableBody>
                                                 {cartList.map(item => (
                                                     <TableRow key={item.id}>
-                                                        <TableCell><img src={item.proImg} alt="" /> {item.title} ${item.price} x {item.qty}</TableCell>
+                                                        <TableCell><img src={item.proImg} alt="" /> {item.title} ₹{item.price} x {item.qty}</TableCell>
                                                         <TableCell
-                                                            align="right">${item.qty * item.price}</TableCell>
+                                                            align="right">₹{item.qty * item.price}</TableCell>
                                                     </TableRow>
                                                 ))}
                                                 <TableRow className="totalProduct">
@@ -36,12 +36,12 @@ const OrderRecivedSec = ({cartList}) => {
                                                 </TableRow>
                                                 <TableRow>
                                                     <TableCell>Sub Price</TableCell>
-                                                    <TableCell align="right">${totalPrice(cartList)}</TableCell>
+                                                    <TableCell align="right">₹{totalPrice(cartList)}</TableCell>
                                                 </TableRow>
                                                 <TableRow>
                                                     <TableCell><b>Total Price</b></TableCell>
                                                     <TableCell
-                                                        align="right"><b>${totalPrice(cartList)}</b></TableCell>
+                                                        align="right"><b>₹{totalPrice(cartList)}</b></TableCell>
                                                 </TableRow>
                                             </TableBody>
                                         </Table>
