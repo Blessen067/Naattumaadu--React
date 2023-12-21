@@ -13,6 +13,7 @@ class Header extends Component {
     isprofileShow: false,
   };
 
+
   cartHandler = () => {
     this.setState({
       isCartShow: !this.state.isCartShow,
@@ -51,7 +52,7 @@ class Header extends Component {
     const handleLogout = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-      router.push("/login "); // Redirect to the home page after logout
+      router.push("/login ");
     };
 
     return (
@@ -184,9 +185,9 @@ class Header extends Component {
                           </Link>
                         </div>
                       </div>
-                      <div className="visible-icon">
-                        <img src='/images/shop/mini-cart/bee2.png' alt="icon" />
-                      </div>
+                      {/* <div className="visible-icon">
+                        <img src='/images/shop/mini-cart/bee2.png' alt="" />
+                      </div> */}
                     </div>
                   </div>
                   <div className="header-wishlist-form-wrapper">

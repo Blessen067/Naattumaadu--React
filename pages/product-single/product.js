@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import Zoom from 'react-medium-image-zoom'
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import { useRouter } from "next/router";
+
 import 'react-medium-image-zoom/dist/styles.css'
 import Link from 'next/link'
 
 const Product = ({ item, addToCart }) => {
-  const router = useRouter;
-  // router.push("/cart")
+ 
   const [qty, setQty] = useState(1);
   const [totalPrices, setTotalPrices] = useState(item.price);
 
@@ -17,7 +16,7 @@ const Product = ({ item, addToCart }) => {
     const totalPrices = basePrice * qty;
     setTotalPrices(totalPrices);
     console.log(totalPrices);
-    // router.push("/cart");
+
   };
 
   useEffect(() => {
@@ -73,20 +72,20 @@ const Product = ({ item, addToCart }) => {
                 <ul>
                   <li className="color">
                     <input id="wa1" type="radio" name="size" value="30" />
-                    <label htmlFor="wa1">4L</label>
+                    <label htmlFor="wa1">2L</label>
                   </li>
                   <li className="color">
                     <input id="wa2" type="radio" name="size" value="30" />
-                    <label htmlFor="wa2">2L</label>
+                    <label htmlFor="wa2">1L</label>
                   </li>
-                  {/* <li className="color">
+                  <li className="color">
                     <input id="wa3" type="radio" name="size" value="30" />
                     <label htmlFor="wa3">500ML</label>
                   </li>
                   <li className="color">
                     <input id="wa4" type="radio" name="size" value="30" />
                     <label htmlFor="wa4">200ML</label>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
             </div>
