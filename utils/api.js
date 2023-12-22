@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://naatumaadu.test/api",
+  baseURL: "https://nazairah.com/naatumaadu-api/api",
 });
 
 export const login = async (email, password) => {

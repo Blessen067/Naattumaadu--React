@@ -18,7 +18,7 @@ const ProductGrid = ({ products, addToCartProduct, addToWishListProduct }) => {
             >
               <div className="product-item">
                 <div className="product-img">
-                  <img src={product.proImg} alt="" />
+                  <img src={product.image} alt="" />
                   <ul>
                     <li>
                       <button
@@ -81,7 +81,7 @@ const ProductGrid = ({ products, addToCartProduct, addToWishListProduct }) => {
                     </div>
                   </div>
                   <div className="mt-2">
-                    <Link onClick={ClickHandler} href="/shop" className="btn theme-btn ms-4  ">
+                    <Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.id}`}  className="btn theme-btn ms-4  ">
                       Buy Now
                     </Link>
                   </div>

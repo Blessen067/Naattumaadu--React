@@ -51,7 +51,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
                         </div>
 
                         <div className="mt-2 d-flex justify-content-center">
-                          <Link onClick={ClickHandler} href="/shop" className="btn theme-btn   ">
+                          <Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.id}`} className="btn theme-btn   ">
                             Buy Now
                           </Link>
                         </div>

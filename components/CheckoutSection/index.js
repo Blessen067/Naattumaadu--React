@@ -45,6 +45,9 @@ const cardType = [
 const CheckoutSection = ({ cartList }) => {
   const router = useRouter();
 
+  console.log("list",totalPrice(cartList))
+
+
   // states
   const [tabs, setExpanded] = React.useState({
     cupon: false,
@@ -118,7 +121,7 @@ const CheckoutSection = ({ cartList }) => {
       company_name: "company_name",
       order_notes: "notes",
       product_id: "10",
-      subtotal: "100",
+      subtotal: totalPrice(cartList),
       quantity: "5",
     };
 

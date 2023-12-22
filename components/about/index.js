@@ -19,7 +19,7 @@ const About = (props) => {
                                     <VideoModal />
                                 </div>000000
                             </div> */}
-                            <img src="https://rubyautodealer.in/assets/img/about/aboutus-ghee.jpg" alt="" />
+                            <img src="https://i.ibb.co/j6bS51R/ghee.jpg" alt="" />
                         </div>
                         <div className="col col-lg-6 col-12">
                             <div className="about-area">

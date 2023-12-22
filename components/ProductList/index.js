@@ -28,8 +28,9 @@ const ProductList = ({ products, addToCartProduct, addToWishListProduct }) => {
             products.slice(0, 6).map((product, pitem) => (
               <div className="col-xl-12 col-12" key={pitem}>
                 <div className="product-item">
+                <Link href='/product-single/[slug]' as={`/product-single/${product.id}`} >
                   <div className="product-img">
-                    <img src={product.proImg} alt="" />
+                    <img src={product.image} alt="" />
                     <ul>
                       <li>
                         <button
@@ -100,6 +101,7 @@ const ProductList = ({ products, addToCartProduct, addToWishListProduct }) => {
                     <p> In the ancient folds of Tamil, emerges "Naattu" — more than words,
                        it's the essence of native spirit, indigenous pride, and timeless tradition. </p>
                   </div>
+                  </Link>
                 </div>
               </div>
             ))}
