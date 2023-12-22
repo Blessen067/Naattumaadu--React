@@ -26,7 +26,7 @@ const CartPage = (props) => {
 
     const { carts } = props;
 
-    console.log('cart', carts)
+    console.log('cartss', carts)
 
     return (
         <>
@@ -120,9 +120,9 @@ const CartPage = (props) => {
                                                         Continue Shopping{" "}
                                                     </Link>
                                                 </li>
-                                                <li>
+                                                {/* <li>
                                                     <button type="submit">Update Cart</button>
-                                                </li>
+                                                </li> */}
                                             </ul>
                                         </div>
                                         <div className="cart-product-list">

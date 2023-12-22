@@ -60,6 +60,7 @@ export const cartReducer = (state = init, action) => {
 
     case INCREMENT_QUANTITY:
       const inc_productId = action.product_id.id;
+      console.log("d")
       const new_cart = state.cart.reduce((cartAcc, product) => {
         if (product.id === inc_productId) {
           cartAcc.push({

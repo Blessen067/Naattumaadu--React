@@ -27,6 +27,8 @@ const Product = ({ item, addToCart }) => {
     setTotalPrices(totalPrices);
   };
   console.log("size", item.size)
+
+
   return (
 
     <div className="product-details">
@@ -117,36 +119,6 @@ const Product = ({ item, addToCart }) => {
               >
                 Add to cart
               </button>
-            </div>
-            <div className="social-share">
-              <span>Share with : </span>
-              <ul className="socialLinks">
-                <li>
-                  <Link href="https://www.facebook.com/">
-                    <i className="fa fa-facebook"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.linkedin.com/login">
-                    <i className="fa fa-linkedin"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://twitter.com/i/flow/login">
-                    <i className="fa fa-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.instagram.com/accounts/login/">
-                    <i className="fa fa-instagram"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.youtube.com/@user-nn3np1nc2l">
-                    <i className="fa fa-youtube-play"></i>
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
