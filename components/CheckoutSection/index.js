@@ -103,12 +103,17 @@ const CheckoutSection = ({ cartList }) => {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+  const user = localStorage.getItem('user')
+  const user_id = JSON.parse(user)
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
     const userData = {
       session_id: "",
-      user_id: "",
+      user_id: user_id.id ? user_id.id : "",
       first_name: "",
       last_name: "",
       email: "",

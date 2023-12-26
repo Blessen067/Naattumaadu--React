@@ -13,7 +13,6 @@ class Header extends Component {
     isprofileShow: false,
   };
 
-
   cartHandler = () => {
     this.setState({
       isCartShow: !this.state.isCartShow,
@@ -62,64 +61,111 @@ class Header extends Component {
             <div className="row">
               <div className="col-lg-2 col-sm-0 ms-0">
                 <div className="navbar-header">
-                  <Link onClick={ClickHandler} href="/" className="navbar-brand ms-2">
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                      <img src='/images/milk/cowlogo.png' style={{ width: '60px' }} alt="icon" />
-                      <h2 style={{ marginLeft: '0px', marginBottom: '0' }}>NaattuMaadu</h2>
+                  <Link
+                    onClick={ClickHandler}
+                    href="/"
+                    className="navbar-brand ms-2"
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src="/images/milk/cowlogo.png"
+                        style={{ width: "60px" }}
+                        alt="icon"
+                      />
+                      <h2 style={{ marginLeft: "0px", marginBottom: "0" }}>
+                        NaattuMaadu
+                      </h2>
                     </div>
                   </Link>
                 </div>
               </div>
               <div className="col-lg-8 d-flex " style={{ marginLeft: "130px" }}>
-                <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                  <ul className="nav navbar-nav me-auto mb-2 ms-3 mb-lg-0" style={{ display: 'flex', alignItems: 'center' }}>
+                <div
+                  id="navbar"
+                  className="collapse navbar-collapse navigation-holder"
+                >
+                  <ul
+                    className="nav navbar-nav me-auto mb-2 ms-3 mb-lg-0"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
                     <li>
                       <Link onClick={ClickHandler} className="" href="/">
                         NAATTULIFE
                       </Link>
                     </li>
                     <li>
-                      <Link onClick={ClickHandler} href="/about"> TASTE & TRADITION</Link>
+                      <Link onClick={ClickHandler} href="/about">
+                        {" "}
+                        TASTE & TRADITION
+                      </Link>
                     </li>
                     <li>
-                      <Link onClick={ClickHandler} href="/shop"> Shop</Link>
+                      <Link onClick={ClickHandler} href="/shop">
+                        {" "}
+                        Shop
+                      </Link>
                     </li>
                     <li>
-                      <Link onClick={ClickHandler} href="/gallery">VISUAL</Link>
+                      <Link onClick={ClickHandler} href="/gallery">
+                        VISUAL
+                      </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} href="/contact"> QUILL</Link>
+                      <Link onClick={ClickHandler} href="/contact">
+                        {" "}
+                        QUILL
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="col-lg-2 " style={{ marginlef: '50px' }}>
+              <div className="col-lg-2 " style={{ marginlef: "50px" }}>
                 <div className="header-right d-flex">
                   <div className="header-profile-form-wrapper">
                     <button
                       onClick={this.profileHandler}
                       className="profile-toggle-btn"
                     >
-                      <i className={`${isprofileShow ? 'fi ti-close' : 'fi flaticon-user'}`}></i>
+                      <i
+                        className={`${
+                          isprofileShow ? "fi ti-close" : "fi flaticon-user"
+                        }`}
+                      ></i>
                     </button>
                     <div
-                      className={`header-profile-content ${isprofileShow ? "header-profile-content-toggle" : ""}`} >
+                      className={`header-profile-content ${
+                        isprofileShow ? "header-profile-content-toggle" : ""
+                      }`}
+                    >
                       <ul>
                         {!isLoggedIn && (
                           <>
                             <li>
-                              <Link onClick={ClickHandler} href="/login">Login</Link>
+                              <Link onClick={ClickHandler} href="/login">
+                                Login
+                              </Link>
                             </li>
                             <li>
-                              <Link onClick={ClickHandler} href="/register">Register</Link>
+                              <Link onClick={ClickHandler} href="/register">
+                                Register
+                              </Link>
                             </li>
                           </>
                         )}
                         {isLoggedIn && (
-                          <li>
-                            <Link onClick={handleLogout} href="/login">Logout</Link>
-                          </li>
+                          <>
+                            <li>
+                              <Link  href="my-orders">
+                                My Orders
+                              </Link>
+                            </li>
+                            <li>
+                              <Link onClick={handleLogout} href="/login">
+                                Logout
+                              </Link>
+                            </li>
+                          </>
                         )}
                       </ul>
                     </div>
@@ -134,8 +180,9 @@ class Header extends Component {
                       <span className="cart-count">{carts.length}</span>
                     </button>
                     <div
-                      className={`mini-cart-content ${isCartShow ? "mini-cart-content-toggle" : ""
-                        }`}
+                      className={`mini-cart-content ${
+                        isCartShow ? "mini-cart-content-toggle" : ""
+                      }`}
                     >
                       <button
                         onClick={this.cartHandler}
@@ -156,7 +203,7 @@ class Header extends Component {
                               <div className="mini-cart-item-des">
                                 <p>{cart.name} </p>
                                 <span className="mini-cart-item-price">
-                                ₹{cart.price} x {" "} {cart.qty}
+                                  ₹{cart.price} x {cart.qty}
                                 </span>
                                 <span className="mini-cart-item-quantity">
                                   <button
@@ -177,10 +224,18 @@ class Header extends Component {
                           Total: ₹{totalPrice(carts)}
                         </span>
                         <div className="mini-btn">
-                          <Link onClick={ClickHandler} href="/checkout" className="view-cart-btn s1">
+                          <Link
+                            onClick={ClickHandler}
+                            href="/checkout"
+                            className="view-cart-btn s1"
+                          >
                             Checkout
                           </Link>
-                          <Link onClick={ClickHandler} href="/cart" className="view-cart-btn">
+                          <Link
+                            onClick={ClickHandler}
+                            href="/cart"
+                            className="view-cart-btn"
+                          >
                             View Cart
                           </Link>
                         </div>
@@ -199,8 +254,9 @@ class Header extends Component {
                       <span className="cart-count">{wishs.length}</span>{" "}
                     </button>
                     <div
-                      className={`mini-wislist-content ${isWishlistShow ? "mini-cart-content-toggle" : ""
-                        }`}
+                      className={`mini-wislist-content ${
+                        isWishlistShow ? "mini-cart-content-toggle" : ""
+                      }`}
                     >
                       <button
                         onClick={this.wishlistHandler}
@@ -221,7 +277,7 @@ class Header extends Component {
                               <div className="mini-cart-item-des">
                                 <p>{wish.name} </p>
                                 <span className="mini-cart-item-price">
-                                ₹{wish.price}
+                                  ₹{wish.price}
                                 </span>
                                 <span className="mini-cart-item-quantity">
                                   <button
@@ -242,16 +298,24 @@ class Header extends Component {
                           Total: ₹{totalwishlistprice}
                         </span>
                         <div className="mini-btn">
-                          <Link onClick={ClickHandler} href="/checkout" className="view-cart-btn s1">
+                          <Link
+                            onClick={ClickHandler}
+                            href="/checkout"
+                            className="view-cart-btn s1"
+                          >
                             Checkout
                           </Link>
-                          <Link onClick={ClickHandler} href="/wishlist" className="view-cart-btn">
+                          <Link
+                            onClick={ClickHandler}
+                            href="/wishlist"
+                            className="view-cart-btn"
+                          >
                             View Wishlist
                           </Link>
                         </div>
                       </div>
                       <div className="visible-icon">
-                        <img src='/images/shop/mini-cart/bee2.png' alt="icon" />
+                        <img src="/images/shop/mini-cart/bee2.png" alt="icon" />
                       </div>
                     </div>
                   </div>
@@ -273,4 +337,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { removeFromCart, removeFromWishList })(Header);
+export default connect(mapStateToProps, { removeFromCart, removeFromWishList })(
+  Header
+);

@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
           <Component {...pageProps} />
-        <ToastContainer />
+        <ToastContainer position="top-center"/>
       </PersistGate>
     </Provider>
 

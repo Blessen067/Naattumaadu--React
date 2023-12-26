@@ -59,7 +59,7 @@ const HomePage2 = (props) => {
                 addToWishListProduct={addToWishListProduct}
                 products={products}
             />
-            <OfferSection />
+            <OfferSection  products={products}/>
             <FlashSale
                 addToCartProduct={addToCartProduct}
                 addToWishListProduct={addToWishListProduct}
