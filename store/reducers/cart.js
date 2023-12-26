@@ -16,7 +16,10 @@ export const cartReducer = (state = init, action) => {
       const productId = action.product.id;
       const productQty = action.qty ? action.qty : 1;
       if (state.cart.findIndex((product) => product.id === productId) !== -1) {
+
         const cart = state.cart.reduce((cartAcc, product) => {
+          console.log("c", product)
+
           if (product.id === productId) {
             cartAcc.push({
               ...product,

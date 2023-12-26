@@ -9,6 +9,7 @@ const Product = ({ item, addToCart }) => {
   const [qty, setQty] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null); // New state for selected size
   const [totalPrices, setTotalPrices] = useState(item.price);
+  
   const calculateTotalPrice = () => {
     const basePrice = item.price;
     const totalPrices = basePrice * qty;
@@ -26,8 +27,6 @@ const Product = ({ item, addToCart }) => {
     const totalPrices = size.price * qty;
     setTotalPrices(totalPrices);
   };
-  console.log("size", item.size)
-
 
   return (
 
