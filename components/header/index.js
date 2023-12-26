@@ -156,7 +156,7 @@ class Header extends Component {
                         {isLoggedIn && (
                           <>
                             <li>
-                              <Link  href="my-orders">
+                              <Link  href="/my-orders">
                                 My Orders
                               </Link>
                             </li>

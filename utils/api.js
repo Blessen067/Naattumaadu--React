@@ -44,3 +44,19 @@ export const productByID = async (id) => {
     throw e;
   }
 }
+
+export const myOrder = async (user_id, session_id) => {
+  try {
+
+    console.log("dadadadadadadaad", user_id);
+    const { data } = await api.post("/orders", {
+      user_id,
+      session_id,
+    });
+
+
+    return data.myorder;
+  } catch (error) {
+    throw error.response;
+  }
+};

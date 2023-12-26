@@ -4,6 +4,7 @@ import Scrollbar from '../components/scrollbar';
 import { connect } from "react-redux";
 import { addToCart, addToWishList } from "../store/actions/action";
 import { fetchProductData } from "../utils/api";
+import { myorder } from "../utils/api";
 import axios from 'axios';
 import Hero2 from '../components/hero2';
 import Category2 from '../components/Category2';
@@ -47,7 +48,21 @@ const HomePage2 = (props) => {
     }, []);
 
     console.log("DD",products)
-
+// const [orders, setOrders] = useState([]);
+//     const my_order = async () => {
+//         try {
+//           myorder(user_id, session_id)
+//             .then((data) => setOrders(data))
+//             .catch((error) => console.error("Error setting products:", error));
+//         } catch (error) {
+//           console.log("Error: ", error);
+      
+//         }
+      
+//       }
+//       useEffect(() => {
+//         my_order()
+//       }, []);
     return (
         <div>
             <Navbar />
