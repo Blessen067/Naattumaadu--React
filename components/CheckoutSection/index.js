@@ -127,9 +127,9 @@ const CheckoutSection = ({ cartList }) => {
       apartment: "apartment",
       company_name: "company_name",
       order_notes: "notes",
-      product_id: idList,
+      product_id: idList ? idList: "",
       subtotal: totalPrice(cartList),
-      quantity,
+      quantity:"0",
     };
 
     const mergedData = { ...userData, ...forms };
