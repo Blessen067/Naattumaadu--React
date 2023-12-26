@@ -50,48 +50,41 @@ const ProductGrid = ({ products, addToCartProduct, addToWishListProduct }) => {
                 </div>
                 <div className="product-content">
                   <h3>
-                    <Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.slug}`}>{product.title}</Link>
+                    <Link
+                      onClick={ClickHandler}
+                      href="/product-single/[slug]"
+                      as={`/product-single/${product.slug}`}
+                    >
+                      {product.title}
+                    </Link>
                   </h3>
-                  <div className="product-btm">
-                    <div className="product-price">
-                      <ul>
-                        <li>₹ {product.price}</li>
-                        <li>₹ {product.delPrice}</li>
-                      </ul>
+                
+                  <div className="product-content ">
+                    <h3 className="d-flex justify-content-center">
+                      {product.name}
+                    </h3>
+                    <div className="product-btm d-flex justify-content-center">
+                      <p style={{ color: "orange", fontWeight: "bold" }}>
+                        ₹ {product.price}
+                      </p>
                     </div>
 
-                    <div className="product-ratting">
-                      <ul>
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                      </ul>
+                    <div className="mt-2 d-flex justify-content-center">
+                      <Link
+                        href="/product-single/[slug]"
+                        as={`/product-single/${product.id}`}
+                        className="btn theme-btn"
+                      >
+                        Buy Now
+                      </Link>
                     </div>
-                  </div>
-                  <div className="mt-2">
-                    <Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.id}`}  className="btn theme-btn ms-4  ">
-                      Buy Now
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-       
           ))}
+      </div>
     </div>
-    </div >
   );
 };
 

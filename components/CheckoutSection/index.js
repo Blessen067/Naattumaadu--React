@@ -106,6 +106,8 @@ const CheckoutSection = ({ cartList }) => {
   const user = localStorage.getItem('user')
   const user_id = JSON.parse(user)
 
+  const idList = cartList.map(item => item.id);
+  const quantity = cartList.map(item => item.qty);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -125,9 +127,9 @@ const CheckoutSection = ({ cartList }) => {
       apartment: "apartment",
       company_name: "company_name",
       order_notes: "notes",
-      product_id: "10",
+      product_id: idList,
       subtotal: totalPrice(cartList),
-      quantity: "5",
+      quantity,
     };
 
     const mergedData = { ...userData, ...forms };

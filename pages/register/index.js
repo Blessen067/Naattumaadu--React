@@ -28,6 +28,8 @@ const SignUpPage = (props) => {
         className: 'errorMessage'
     }));
 
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
     const submitForm = async (e) => {
         e.preventDefault();
 
@@ -35,7 +37,7 @@ const SignUpPage = (props) => {
             try {
 
                 console.log('s', value)
-                const response = await axios.post("http://ecomm-api.test/api/register", {
+                const response = await axios.post(`${baseUrl}/register`, {
                     email: value.email,
                     name: value.name,
                     password: value.password

@@ -19,6 +19,8 @@ export const receiveProducts = (products) => ({
 
 export const addToCart = (product, qty, color, size) => (dispatch) => {
   toast.success("Item Added to Cart");
+  console.log("c", product)
+
   dispatch({
     type: types.ADD_TO_CART,
     product,

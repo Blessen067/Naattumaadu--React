@@ -21,6 +21,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   });
 
   const priceChangeHandler = ({ target: { name, value } }) => {
+    console.log("fi", value);
     const val = typeof value === "string" ? JSON.parse(value) : value;
     setFilter({ ...filter, [name]: val });
   };
@@ -33,9 +34,12 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     if (filter.price === "") {
       return true;
     } else if (filter.price.max && filter.price.min) {
+      console.log("90", price);
       return price <= filter.price.max && price >= filter.price.min;
     } else if (filter.price.min) {
       return price >= filter.price.min;
+    } else if (filter.price.max) {
+      return price <= filter.price.min;
     } else {
       return false;
     }
@@ -44,12 +48,6 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   const addToCartProduct = (product) => {
     addToCart(product, 1, filter.color, filter.size);
   };
-
-  // const products = productsArray
-  //   .filter((el) => priceFIlter(el.price))
-  //   .filter((el) => (filter.size ? el.size === filter.size : true))
-  //   .filter((el) => (filter.color ? el.color === filter.color : true))
-  //   .filter((el) => (filter.brand ? el.brand === filter.brand : true));
 
   const addToWishListProduct = (products) => {
     addToWishList(products);
@@ -69,7 +67,12 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     fetchProduct();
   }, []);
 
-  console.log("DD", products);
+  const fil = products
+    .filter((el) => priceFIlter(el.price))
+    .filter((el) => (filter.size ? el.size === filter.size : true))
+    .filter((el) => (filter.color ? el.color === filter.color : true))
+    .filter((el) => (filter.brand ? el.brand === filter.brand : true));
+  console.log("DD", fil);
 
   return (
     <Fragment>
@@ -78,15 +81,15 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <div className="shop-section">
         <div className="container">
           <div className="row">
-            {/* <FilterSidebar
-                filter={filter}
-                priceChangeHandler={priceChangeHandler}
-                changeHandler={changeHandler}
-              /> */}
+            <FilterSidebar
+              filter={filter}
+              priceChangeHandler={priceChangeHandler}
+              changeHandler={changeHandler}
+            />
             <FilterAllProduct
               addToCartProduct={addToCartProduct}
               addToWishListProduct={addToWishListProduct}
-              products={products}
+              products={fil}
             />
           </div>
         </div>

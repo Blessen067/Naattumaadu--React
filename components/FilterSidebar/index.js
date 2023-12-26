@@ -25,13 +25,13 @@ const brands = ["flower", "hill", "forest"];
 const FilterSidebar = ({ filter, changeHandler, priceChangeHandler }) => {
   return (
     <div className="col-lg-4">
-      <div className="shop-filter-wrap">
+      <div className="shop-filter-wrap" style={{position:"sticky", top:"1px"}}>
         <div className="filter-item">
           <div className="shop-filter-item">
-            <h2>Search</h2>
+            {/* <h2>Search</h2> */}
             <div className="shop-filter-search">
               <form>
-                <div>
+                {/* <div>
                   <input
                     type="text"
                     className="form-control"
@@ -40,7 +40,7 @@ const FilterSidebar = ({ filter, changeHandler, priceChangeHandler }) => {
                   <button type="submit">
                     <i className="ti-search"></i>
                   </button>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
@@ -81,7 +81,7 @@ const FilterSidebar = ({ filter, changeHandler, priceChangeHandler }) => {
             </ul>
           </div>
         </div>
-        <div className="filter-item">
+        {/* <div className="filter-item">
           <div className="shop-filter-item">
             <h2>Size</h2>
             <ul>
@@ -115,7 +115,7 @@ const FilterSidebar = ({ filter, changeHandler, priceChangeHandler }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
         {/* <div className="filter-item">
           <div className="shop-filter-item color">
             <h2> Color</h2>
