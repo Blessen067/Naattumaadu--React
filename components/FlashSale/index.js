@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import DefaultModal from "../../components/Modal";
 import TimeCountDown from "../countdown";
@@ -21,6 +21,7 @@ const FlashSale = ({ products, addToCartProduct, addToWishListProduct }) => {
         setState(item);
     };
 
+  
     return (
         <section className="flash-Sale-area product-area section-padding"  style={{display:'none'}}>
        <div className="container">

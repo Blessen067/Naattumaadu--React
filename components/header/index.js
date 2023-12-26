@@ -68,7 +68,7 @@ class Header extends Component {
                   >
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <img
-                        src="/images/milk/cowlogo.png"
+                        src="cowlogo.png"
                         style={{ width: "60px" }}
                         alt="icon"
                       />

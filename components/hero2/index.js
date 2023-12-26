@@ -24,7 +24,7 @@ const Hero2 = () => {
             <div className="hero-slider">
                 <div className="slide">
                     <div className="slide-inner" style={{
-                        backgroundImage: `url('/images/slider/gh-p1.png')`,
+                        backgroundImage: `url('gh-p1.png')`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover', // Use 'cover' to make the background image cover the entire container
                         marginBottom: "50px"
