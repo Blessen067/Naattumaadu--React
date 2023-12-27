@@ -24,7 +24,7 @@ export const login = async (email, password) => {
 
 export const fetchProductData = async () => {
   try {
-    const response = await api.get('/products');
+    const response = await api.get("/products");
     console.log(response);
     return response.data;
   } catch (error) {
@@ -35,28 +35,45 @@ export const fetchProductData = async () => {
 
 export const productByID = async (id) => {
   try {
+    console.log("io", id);
+    const { data } = await api.get(`/products/${id}`);
 
-    console.log("io", id)
-    const { data } = await api.get(`/products/${id}`)
-
-    return data
+    return data;
   } catch (e) {
     throw e;
   }
-}
+};
 
 export const myOrder = async (user_id, session_id) => {
   try {
-
     console.log("dadadadadadadaad", user_id);
     const { data } = await api.post("/orders", {
       user_id,
       session_id,
     });
 
-
     return data.myorder;
   } catch (error) {
     throw error.response;
+  }
+};
+
+export const breadCrumbs = async () => {
+  try {
+    const { data } = await api.get("/image");
+
+    return data.image
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const gallery = async () => {
+  try {
+    const { data } = await api.get("/gallery");
+
+    return data.image
+  } catch (e) {
+    throw e;
   }
 };

@@ -102,7 +102,7 @@ class Header extends Component {
                     <li>
                       <Link onClick={ClickHandler} href="/shop">
                         {" "}
-                        Shop
+                        Heritage & Provisions
                       </Link>
                     </li>
                     <li>

@@ -1,104 +1,96 @@
-
+$dark-gray: #333333a4; // Define your dark gray color here
 
 .tp-breadcumb-area {
-    background: url(/bread.png) no-repeat center top / cover;
-	background-position: center bottom;
-    min-height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
+  background-position: center top;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
 
-	.hero-shape-img-1{
-		position: absolute;
-		right: 0;
-		z-index: -2;
+  @media (max-width: 767px) {
+    min-height: 250px;
+  }
 
-		@media(max-width: 991px) {
-			display: none;
-		}
-	}
-	.hero-shape-img-2{
-		position: absolute;
-		left: 0;
-		z-index: -2;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $dark-gray; // Use the defined dark gray color
+    content: "";
+    z-index: -1;
+    opacity: 0.65;
+  }
 
-		@media(max-width: 991px) {
-			display: none;
-		}
-	}
+  .tp-breadcumb-wrap {
+    text-align: center;
 
-	@media(max-width: 767px) {
-		min-height: 250px;
-	}
+    h2 {
+      font-size: 50px;
+      color: #fff;
+      line-height: 60px;
+      margin-top: -10px;
+      margin-bottom: 20px;
 
-	&:before{
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: $dark-gray;
-		content: "";
-		z-index: -1;
-		opacity: .65;
-	}
-	.tp-breadcumb-wrap {
-		text-align: center;
+      @media (max-width: 767px) {
+        font-size: 35px;
+        line-height: 35px;
+      }
+    }
 
-		h2{
-			font-size: 50px;
-			color: #fff;
-			line-height: 60px;
-			margin-top: -10px;
-			margin-bottom: 20px;
+    ul {
+      li {
+        display: inline-block;
+        padding: 0px 5px;
+        color: #fff;
+        position: relative;
+        font-size: 20px;
+        font-family: $base-font;
 
-			@media(max-width: 767px) {
-				font-size: 35px;
-				line-height: 35px;
-			}
-		}
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
 
-		ul{
-			li{
-				display: inline-block;
-				padding: 0px 5px;
-				color: #fff;
-				position: relative;
-				font-size: 20px;
-				font-family: $base-font;
+        &:after {
+          content: "/";
+          position: relative;
+          left: 7px;
+        }
 
-				@media(max-width:767px){
-					font-size: 16px;
-				}
+        &:last-child {
+          span {
+            color: $white;
+          }
+          &:after {
+            display: none;
+          }
+        }
 
-				&:after{
-					content: "/";
-					position: relative;
-					left: 7px;
-				}
+        a {
+          color: #fff;
+          font-size: 20px;
+          transition: all 0.3s;
 
-				&:last-child{
-					span{
-						color: $white;
-					}
-					&:after{
-						display: none;
-					}
-				}
-
-				a{
-					color: #fff;
-					font-size: 20px;
-					transition: all .3s;
-
-					&:hover{
-						color: $theme-primary-color;
-					}
-				}
-			}
-		}
-	}
+          &:hover {
+            color: $theme-primary-color;
+          }
+        }
+      }
+    }
+  }
 }
 
+.hero-shape-img-1,
+.hero-shape-img-2 {
+  position: absolute;
+  z-index: -2;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+// Additional styles for your component as needed
