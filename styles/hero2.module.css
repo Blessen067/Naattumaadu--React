@@ -7,45 +7,24 @@
 }
 
 
-
-/* Add these styles to your existing hero2.module.css file */
-
-.hero-style-2 {
-  width: 100%;
-  overflow: hidden;
-}
-
-.slide-inner {
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 50px;
-}
-
-.slide-caption {
-  text-align: center;
-}
-
-.slide-title img {
-  height: 200px;
-  width: 250px;
-}
-
-.btns {
-  margin-bottom: 100px;
-}
-
 /* Media Query for Mobile View */
-@media screen and (max-width: 480px) {
-  .slide-inner {
+@media screen and (max-width: 600px) {
+  .slideMob {
     /* Adjust background image size or any other styles for mobile view */
-    background-size: contain;
+    background-size: contain !important;
     margin-bottom: 20px;
   }
 
-  .slide-title img {
+  .imgMob {
     /* Adjust image size for mobile view */
     height: 100px;
     width: 125px;
+  }
+
+  .headMob{
+    font-size:50px !important;
+    line-height: normal !important;
+    text-align: center;
   }
 
   .btns {

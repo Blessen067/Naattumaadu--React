@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Link from 'next/link'
 
-import '../../styles/hero2.module.css'
+import styles from '../../styles/hero2.module.css'
 
 const Hero2 = () => {
 
@@ -14,7 +14,7 @@ const Hero2 = () => {
         >
             <div className="hero-slider">
                 <div className="slide">
-                    <div className="slide-inner" style={{
+                    <div className={`slide-inner ${styles.slideMob}`} style={{
                         backgroundImage: `url('gh-p1.png')`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover', // Use 'cover' to make the background image cover the entire container
@@ -24,7 +24,7 @@ const Hero2 = () => {
                             <div className="row">
                                 <div className="slide-caption">
                                     <div className="slide-title mb-3">
-                                        <img src="Images/fresh.png" alt="fresh" height={"200px"} width={"250px"}/>
+                                        <img src="Images/fresh.png" className={styles.imgMob} alt="fresh" height={"200px"} width={"250px"}/>
                                     </div>
                                     <div className="btns" style={{ marginBottom: "100px" }}>
                                         <Link href="/shop" className="btn theme-btn">Shop Now <i className="fa fa-angle-double-right"></i></Link>

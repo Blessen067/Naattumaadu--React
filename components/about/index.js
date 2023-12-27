@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from '../../styles/hero2.module.css'
 
 // import VideoModal from '../ModalVideo';
 
@@ -28,7 +29,7 @@ const About = (props) => {
                                         <div className="bd-about__content-wrapper mb-60">
                                             <div className="bd-section__title-wrapper mb-40">
                                                 {/* <span className="bd-sub__title">About Us</span> */}
-                                                <h3 className="bd-section__title mt-5" style={{
+                                                <h3 className={`bd-section__title mt-5 ${styles.headMob}`} style={{
                                                     fontSize: '100px',
                                                     lineHeight: '125px',
                                                     textTransform: 'uppercase',
