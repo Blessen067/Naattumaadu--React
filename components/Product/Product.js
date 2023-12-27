@@ -34,7 +34,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
               products.map((product, pitem) => (
                 <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-3" key={pitem}>
                   <div className="product-item">
-                    <Link href='/product-single/[slug]' as={`/product-single/${product.id}`}>
+                    <Link href='product-single/[slug]' as={`product-single/${product.id}`}>
                       <div className="product-img">
                         <img 
                         src={product.image} 
@@ -51,7 +51,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
                         </div>
 
                         <div className="mt-2 d-flex justify-content-center">
-                          <Link  href='/product-single/[slug]' as={`/product-single/${product.id}`} className="btn theme-btn">
+                          <Link  href='product-single/[slug]' as={`product-single/${product.id}`} className="btn theme-btn">
                             Buy Now
                           </Link>
                         </div>

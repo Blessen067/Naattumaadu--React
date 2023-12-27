@@ -106,7 +106,7 @@ const CheckoutSection = ({ cartList }) => {
   const user = localStorage.getItem('user')
   const user_id = JSON.parse(user)
 
-  const idList = cartList.map(item => item.id);
+  const idList = cartList.map(item => item?.id);
   const quantity = cartList.map(item => item.qty);
 
   const handleSubmit = async (e) => {
@@ -115,7 +115,7 @@ const CheckoutSection = ({ cartList }) => {
 
     const userData = {
       session_id: "",
-      user_id: user_id.id ? user_id.id : "",
+      user_id: user_id?.id ? user_id.id : "",
       first_name: "",
       last_name: "",
       email: "",
