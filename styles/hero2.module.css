@@ -5,3 +5,51 @@
     font-size: 24px; /* Adjust the font size for better readability on smaller screens */
   }
 }
+
+
+
+/* Add these styles to your existing hero2.module.css file */
+
+.hero-style-2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.slide-caption {
+  text-align: center;
+}
+
+.slide-title img {
+  height: 200px;
+  width: 250px;
+}
+
+.btns {
+  margin-bottom: 100px;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 480px) {
+  .slide-inner {
+    /* Adjust background image size or any other styles for mobile view */
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+  .slide-title img {
+    /* Adjust image size for mobile view */
+    height: 100px;
+    width: 125px;
+  }
+
+  .btns {
+    margin-bottom: 50px;
+  }
+}
+

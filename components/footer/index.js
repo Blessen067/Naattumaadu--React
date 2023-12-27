@@ -16,7 +16,7 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12" >
                             <div className="widget about-widget">
                                 <h3 style={{ color: 'white' }}>ABOUT US </h3>
-                                <p>In the ancient folds of Tamil, emerges "Naattu" — more than words,
+                                <p style={{textAlign:'justify'}}>In the ancient folds of Tamil, emerges "Naattu" — more than words,
                                     it's the essence of native spirit, indigenous pride, and timeless tradition.
                                     A linguistic sanctuary where time-honored wisdom echoes,
                                     celebrating the primal "aadhi" with unwavering reverence.</p>
@@ -81,7 +81,7 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>OUR PRODUCT</h3>
                                 </div>
-                                <p>Under the Indian sun, sacred cow's milk transforms into ghee.
+                                <p style={{textAlign:'justify'}}>Under the Indian sun, sacred cow's milk transforms into ghee.
                                     Cream, nurtured by sunlight, sours at room temperature, then chills at 4°C.
                                     In a copper pot over firewood, the butter sizzles and dances—an ancient alchemy,
                                     a symphony with the sun, creating liquid gold.</p>

@@ -13,7 +13,7 @@ const About = (props) => {
             <section className="about-section  ">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col col-lg-6 col-12 pe-5">
+                        <div className="col col-lg-6 col-12 ">
                             {/* <div className="video-area">
                                 <div className="video-holder">
                                     <VideoModal />
@@ -28,7 +28,15 @@ const About = (props) => {
                                         <div className="bd-about__content-wrapper mb-60">
                                             <div className="bd-section__title-wrapper mb-40">
                                                 {/* <span className="bd-sub__title">About Us</span> */}
-                                                <h3 className="bd-section__title mt-5" style={{fontSize:"80px"}}>TASTE AND TRADITION</h3>
+                                                <h3 className="bd-section__title mt-5" style={{
+                                                    fontSize: '100px',
+                                                    lineHeight: '125px',
+                                                    textTransform: 'uppercase',
+                                                    fontWeight: 600,
+                                                    marginBottom: '60px',
+                                                    fontFamily: '$heading-font-s3'
+                                            }}
+                                            >TASTE AND TRADITION</h3>
                                                 <p style={{textAlign:"justify"}}>
                                                     In the heart of linguistic antiquity, within the enchanting folds
                                                     of the world's ancient tongue, Tamil, a profound concept emerges -
