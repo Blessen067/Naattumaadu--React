@@ -9,7 +9,7 @@ const NaattuPage = (props) => {
                     <div className="col-lg-7">
                         <p>what we provide</p>
                         <h1>GHEE</h1><br></br>
-                        <p>Beneath the Indian sun, milk from sacred indigenous cows is
+                        <p style={{textAlign:"justify"}}>Beneath the Indian sun, milk from sacred indigenous cows is
                             gently heated, coaxing cream to separate and fill aged cans.
                             A touch of curd from native cow's milk joins the mix.
                             Sunlight bathes the cream, and room temperature nurtures
@@ -45,7 +45,7 @@ const NaattuPage = (props) => {
                     <div className="col-lg-8">
                         <p>NAATTUMAADU</p>
                         <h1>A2 GHEE BENEFITS & NUTRITION FACTS</h1><br />
-                        <p>A2 Cow Ghee has essential macro and micronutrients that fulfill the
+                        <p style={{textAlign:"justify"}}>A2 Cow Ghee has essential macro and micronutrients that fulfill the
                             daily dietary requirements of the body. It is a rich source of antioxidants
                             and vital vitamins like Vit B2, B12, B6, C, E, and K, Omega-3 and Omega-6 fatty
                             acids, and healthy amino acids.
