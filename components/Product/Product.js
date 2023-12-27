@@ -16,7 +16,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
               <h2>
                 Heritage <span>&</span>  Provisions
               </h2>
-              <p>
+              <p style={{textAlign:"justify"}}>
                 Ghee is clarified butterfat and contains about 99% of milk fat.
                 Ghee from buffalo milk has no colour, unlike ghee from cattle,
                 which is golden yellow due to the presence of carotenoids as

@@ -32,11 +32,12 @@ const Hero2 = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="slide-caption">
-                                    <div className="slide-title">
-                                        <div className="bd-hero__content z-index-11" style={{}}>
+                                    <div className="slide-title mb-3">
+                                        {/* <div className="bd-hero__content z-index-11" style={{}}>
                                             <span data-animation="fadeInUp" data-delay=".3s">Get everytime fresh assets</span>
                                             <h2 data-animation="fadeInUp" data-delay=".5s">fresh Ghee</h2>
-                                        </div>
+                                        </div> */}
+                                        <img src="Images/fresh.png" alt="fresh" height={"250px"} width={"300px"}/>
                                     </div>
                                     <div className="btns" style={{ marginBottom: "100px" }}>
                                         <Link href="/shop" className="btn theme-btn">Shop Now <i className="fa fa-angle-double-right"></i></Link>

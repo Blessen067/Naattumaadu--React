@@ -36,7 +36,7 @@ const OfferSection = (props) => {
               <div className="offer-wrap">
                 <div className="offer-title">
                   <small>Featured Product</small>
-                  <h2>
+                  <h2 style={{textTransform:"uppercase",fontSize:"60px" }} >
                     {featureProduct[0]?.name} <span></span> <br />
                   </h2>
                 </div>
