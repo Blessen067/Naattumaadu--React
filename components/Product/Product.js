@@ -13,7 +13,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
         <div className="row">
           <div className="col-lg-6 offset-lg-3">
             <div className="section-title">
-              <h2>
+              <h2 style={{textTransform:"uppercase"}}>
                 Heritage <span>&</span>  Provisions
               </h2>
               <p style={{textAlign:"justify"}}>

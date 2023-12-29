@@ -5,6 +5,7 @@ import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import GalleryPage from '../../components/gallery/gallery';
 import { gallery } from '../../utils/api';
+import Project from '../../components/ProjectSection';
 
 const Gallery = (props) => {
     const [galleryImages, setGalleryImage] = useState("");
@@ -22,7 +23,8 @@ const Gallery = (props) => {
         <div>
             <Navbar />
             <PageTitle pageTitle={'A VISUAL ODE'} pagesub={' A VISUAL ODE'}/> 
-            <GalleryPage images={galleryImages}/>
+            {/* <GalleryPage images={galleryImages}/> */}
+            <Project images={galleryImages}/>
             <Footer/>
             <Scrollbar/>
         </div>

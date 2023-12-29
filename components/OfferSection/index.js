@@ -28,7 +28,7 @@ const OfferSection = (props) => {
                 <img
                   src={featureProduct[0]?.image}
                   alt=""
-                  style={{ width: "300px", marginLeft: "100px" }}
+                  // style={{ width: "300px", marginLeft: "100px" }}
                 />
               </div>
             </div>

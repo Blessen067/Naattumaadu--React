@@ -32,3 +32,9 @@
   }
 }
 
+/* Media Query for Mobile View */
+@media screen and (max-width: 330px) {
+ .shop_now{
+   margin-bottom: 147px !important;
+ }
+}

@@ -77,3 +77,24 @@ export const gallery = async () => {
     throw e;
   }
 };
+
+export const heroImageAPI = async () => {
+  try {
+    const { data } = await api.get("/herogallery");
+
+    return data.image
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const socialLinks = async () => {
+  try {
+    const { data } = await api.get("/socialmedia");
+
+    return data.socialmedia
+  } catch (e) {
+    throw e;
+  }
+};
+

@@ -2,9 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '../../styles/hero2.module.css'
 
-// import VideoModal from '../ModalVideo';
+import VideoModal from '../ModalVideo';
 
 const About = (props) => {
+    
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     };
@@ -15,11 +16,11 @@ const About = (props) => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col col-lg-6 col-12 ">
-                            {/* <div className="video-area">
+                            <div className="video-area">
                                 <div className="video-holder">
                                     <VideoModal />
                                 </div>000000
-                            </div> */}
+                            </div>
                             <img src="images/spoon.png" alt="" />
                         </div>
                         <div className="col col-lg-6 col-12">

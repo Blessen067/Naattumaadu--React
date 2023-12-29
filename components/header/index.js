@@ -5,6 +5,7 @@ import Router from "next/router";
 import { totalPrice } from "../../utils";
 import MobileMenu from "../MobileMenu";
 import { removeFromCart, removeFromWishList } from "../../store/actions/action";
+import styles from "../../styles/naMa.module.css"
 
 class Header extends Component {
   state = {
@@ -59,7 +60,7 @@ class Header extends Component {
         <nav className="navigation navbar navbar-expand-lg">
           <div className="">
             <div className="row">
-              <div className="col-lg-2 col-sm-0 ms-0">
+              <div className={`col-lg-2 col-sm-0 ms-0 ${styles.logo}`}>
                 <div className="navbar-header">
                   <Link
                     onClick={ClickHandler}
