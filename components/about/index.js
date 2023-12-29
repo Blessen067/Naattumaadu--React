@@ -31,8 +31,8 @@ const About = (props) => {
                                             <div className="bd-section__title-wrapper mb-40">
                                                 {/* <span className="bd-sub__title">About Us</span> */}
                                                 <h3 className={`bd-section__title mt-5 ${styles.headMob}`} style={{
-                                                    fontSize: '100px',
-                                                    lineHeight: '125px',
+                                                    fontSize: '60px',
+                                                    // lineHeight: '125px',
                                                     textTransform: 'uppercase',
                                                     fontWeight: 600,
                                                     marginBottom: '60px',

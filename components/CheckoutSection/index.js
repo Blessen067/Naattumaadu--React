@@ -45,8 +45,7 @@ const cardType = [
 const CheckoutSection = ({ cartList }) => {
   const router = useRouter();
 
-  console.log("list",totalPrice(cartList))
-
+  console.log("list", totalPrice(cartList));
 
   // states
   const [tabs, setExpanded] = React.useState({
@@ -61,7 +60,7 @@ const CheckoutSection = ({ cartList }) => {
     country: "",
     dristrict: "",
     address: "",
-    post_code: "",
+    postcode: "",
     email: "",
     phone: "",
     note: "",
@@ -103,15 +102,15 @@ const CheckoutSection = ({ cartList }) => {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const user = localStorage.getItem('user')
-  const user_id = JSON.parse(user)
+  const user = localStorage.getItem("user");
+  const user_id = JSON.parse(user);
 
-  const idList = cartList.map(item => item?.id);
-  const quantity = cartList.map(item => item.qty);
+  const idList = cartList.map((item) => item?.id);
+  const quantity = cartList.map((item) => item?.qty);
+  const quantityString = quantity.join(', ');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
 
     const userData = {
       session_id: "",
@@ -121,15 +120,15 @@ const CheckoutSection = ({ cartList }) => {
       email: "",
       phone: "",
       address: "",
-      city: "marthandam",
-      state: "marthandam",
-      postcode: "545456",
-      apartment: "apartment",
-      company_name: "company_name",
-      order_notes: "notes",
-      product_id: idList ? idList: "",
+      city: "",
+      state: "",
+      postcode: "",
+      apartment: "",
+      company_name: "",
+      order_notes: "",
+      product_id: idList ? idList : "",
       subtotal: totalPrice(cartList),
-      quantity:"0",
+      quantity: quantity ? quantityString : "0",
     };
 
     const mergedData = { ...userData, ...forms };
@@ -305,7 +304,7 @@ const CheckoutSection = ({ cartList }) => {
                         <Grid item sm={12} xs={12}>
                           <TextField
                             fullWidth
-                            label="Dristrict"
+                            label="District"
                             name="dristrict"
                             value={forms.dristrict}
                             onChange={(e) => changeHandler(e)}
@@ -336,8 +335,8 @@ const CheckoutSection = ({ cartList }) => {
                           <TextField
                             fullWidth
                             label="Post Code"
-                            name="post_code"
-                            value={forms.post_code}
+                            name="postcode"
+                            value={forms.postcode}
                             onChange={(e) => changeHandler(e)}
                             type="text"
                             InputLabelProps={{

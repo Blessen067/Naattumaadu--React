@@ -115,8 +115,8 @@ const Footer = (props) => {
             </div>
             <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
               <div className="widget newsletter-widget">
-                <div className="widget-title">
-                  <h3>Heritage & Provisions</h3>
+                <div className="me-4">
+                  <h3 style={{ color: "white" }}>HERITAGE & PROVISIONS</h3>
                 </div>
                 <p style={{ textAlign: "justify" }}>
                   Under the Indian sun, sacred cow's milk transforms into ghee.
@@ -135,7 +135,7 @@ const Footer = (props) => {
           <div className="row">
             <div className="col col-xs-12">
               <Link href={"/"}>
-                COPYRIGHT DESIGN BY ORANGE MEGA SOFTWARES - 2023{" "}
+                COPYRIGHT BY NAATTUMAADU DESIGNED BY ORANGE MEGA SOFTWARES - 2023{" "}
               </Link>
             </div>
           </div>
