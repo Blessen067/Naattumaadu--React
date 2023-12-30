@@ -22,6 +22,8 @@ import axios from "axios";
 import CheckWrap from "../CheckWrap";
 import RazorpayScript from "./Razorpay";
 import { useRouter } from "next/router";
+import { clearCart } from "../../store/actions/action";
+import { useDispatch } from 'react-redux';
 
 const cardType = [
   {
@@ -44,6 +46,7 @@ const cardType = [
 
 const CheckoutSection = ({ cartList }) => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   console.log("list", totalPrice(cartList));
 
@@ -107,9 +110,10 @@ const CheckoutSection = ({ cartList }) => {
 
   const idList = cartList.map((item) => item?.id);
   const quantity = cartList.map((item) => item?.qty);
-  const quantityString = quantity.join(', ');
+  const quantityString = quantity.join(", ");
 
   const handleSubmit = async (e) => {
+    dispatch(clearCart());
     e.preventDefault();
 
     const userData = {
@@ -160,6 +164,7 @@ const CheckoutSection = ({ cartList }) => {
               })
               .then((paymentResponse) => {
                 router.push("/order-received");
+                dispatch(clearCart());
                 addToast(paymentResponse.data.data, {
                   appearance: "success",
                   autoDismiss: true,
@@ -167,6 +172,7 @@ const CheckoutSection = ({ cartList }) => {
                 console.log("Payment stored:", paymentResponse.data.data);
               })
               .catch((error) => {
+                dispatch(clearCart());
                 console.error(
                   "Error storing payment on the backend:",
                   error.response ? error.response.data : error.message
@@ -192,6 +198,7 @@ const CheckoutSection = ({ cartList }) => {
 
       razorpay.open();
     } catch (error) {
+      clearCart();
       console.error(
         "Error placing order:",
         error.response ? error.response.data : error.message
