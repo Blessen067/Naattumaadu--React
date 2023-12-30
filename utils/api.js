@@ -62,7 +62,7 @@ export const breadCrumbs = async () => {
   try {
     const { data } = await api.get("/image");
 
-    return data.image
+    return data.image;
   } catch (e) {
     throw e;
   }
@@ -72,7 +72,7 @@ export const gallery = async () => {
   try {
     const { data } = await api.get("/gallery");
 
-    return data.image
+    return data.image;
   } catch (e) {
     throw e;
   }
@@ -82,7 +82,7 @@ export const heroImageAPI = async () => {
   try {
     const { data } = await api.get("/herogallery");
 
-    return data.image
+    return data.image;
   } catch (e) {
     throw e;
   }
@@ -92,9 +92,24 @@ export const socialLinks = async () => {
   try {
     const { data } = await api.get("/socialmedia");
 
-    return data.socialmedia
+    return data.socialmedia;
   } catch (e) {
     throw e;
   }
 };
 
+export const messageUS = async (name, lastname, email, subject, notes) => {
+  try {
+    const { data } = await api.post("/message", {
+      name,
+      lastname,
+      email,
+      subject,
+      message: notes,
+    });
+
+    return data.message;
+  } catch (error) {
+    throw error;
+  }
+};
