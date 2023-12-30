@@ -26,7 +26,7 @@ const PageTitle = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="tp-breadcumb-wrap">
+            <div className="tp-breadcumb-wrap" style={{position:"absolute", bottom:"30px"}}>
               <h2>{props.pageTitle}</h2>
               <ul>
                 <li>

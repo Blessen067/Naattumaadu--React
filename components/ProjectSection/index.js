@@ -355,11 +355,12 @@ class Project extends Component {
                               <Link
                                 onClick={this.ClickHandler}
                                 href="/project-single"
+                                style={{color:"black"}}
                               >
                                 {project.name}
                               </Link>
                             </h3>
-                            <p className="cat">healthy food</p>
+                            <p   style={{color:"black"}} className="cat">healthy food</p>
                           </div>
                         </div>
                       </div>

@@ -77,7 +77,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   return (
     <Fragment>
       <Navbar />
-      <PageTitle pageTitle={"Shop "} pagesub={" Shop"} />
+      <PageTitle pageTitle={"HERITAGE & PROVISIONS"} pagesub={"HERITAGE & PROVISIONS"} />
       <div className="shop-section">
         <div className="container">
           <div className="row">

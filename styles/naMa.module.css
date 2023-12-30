@@ -24,9 +24,22 @@
 
   @media screen and (max-width: 600px) {
     .logo{
-      width: 0px;
+      width: 205px;
     }
   }
+
+  @media screen and (max-width: 325px) {
+    .logo{
+      width: 170px;
+    }
+  }
+
+  @media screen and (max-width: 428px) {
+  .headLogo{
+      margin-top: 0px !important;
+    }
+  }
+  
   
 
   

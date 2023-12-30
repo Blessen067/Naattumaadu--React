@@ -30,6 +30,14 @@
   .btns {
     margin-bottom: 50px;
   }
+
+  .button{
+    margin-left: 26px !important;
+  }
+
+  .shop_now_link{
+    width: auto !important;
+  }
 }
 
 /* Media Query for Mobile View */

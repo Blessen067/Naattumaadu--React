@@ -5,7 +5,7 @@ import Router from "next/router";
 import { totalPrice } from "../../utils";
 import MobileMenu from "../MobileMenu";
 import { removeFromCart, removeFromWishList } from "../../store/actions/action";
-import styles from "../../styles/naMa.module.css"
+import styles from "../../styles/naMa.module.css";
 
 class Header extends Component {
   state = {
@@ -61,26 +61,26 @@ class Header extends Component {
           <div className="">
             <div className="row">
               <div className={`col-lg-2 col-sm-0 ms-0 ${styles.logo}`}>
-                <div className="navbar-header">
+                <div className={`navbar-header ${styles.headLogo}`}>
                   <Link
                     onClick={ClickHandler}
                     href="/"
                     className="navbar-brand ms-2"
                   >
+                    <img
+                      src="/logo_lite.webp"
+                      // style={{ width: "60px" }}
+                      alt="icon"
+                    />
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src="/cowlogo.png"
-                        style={{ width: "60px" }}
-                        alt="icon"
-                      />
-                      <h2 style={{ marginLeft: "0px", marginBottom: "0" }}>
+                      {/* <h2 style={{ marginLeft: "0px", marginBottom: "0" }}>
                         NaattuMaadu
-                      </h2>
+                      </h2> */}
                     </div>
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-8 d-flex " style={{ marginLeft: "130px" }}>
+              <div className="col-lg-8 d-flex ">
                 <div
                   id="navbar"
                   className="collapse navbar-collapse navigation-holder"
@@ -91,19 +91,28 @@ class Header extends Component {
                   >
                     <li>
                       <Link onClick={ClickHandler} className="" href="/">
+                        NAATTUMAADU
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={ClickHandler}
+                        className=""
+                        href="/naattulife"
+                      >
                         NAATTULIFE
                       </Link>
                     </li>
                     <li>
                       <Link onClick={ClickHandler} href="/about">
                         {" "}
-                        TASTE & TRADITION
+                        TRADITION
                       </Link>
                     </li>
                     <li>
                       <Link onClick={ClickHandler} href="/shop">
                         {" "}
-                        Heritage & Provisions
+                        HERITAGE
                       </Link>
                     </li>
                     <li>
@@ -157,9 +166,7 @@ class Header extends Component {
                         {isLoggedIn && (
                           <>
                             <li>
-                              <Link  href="/my-orders">
-                                My Orders
-                              </Link>
+                              <Link href="/my-orders">My Orders</Link>
                             </li>
                             <li>
                               <Link onClick={handleLogout} href="/login">
@@ -181,6 +188,7 @@ class Header extends Component {
                       <span className="cart-count">{carts.length}</span>
                     </button>
                     <div
+                      style={{ zIndex: 9999 }}
                       className={`mini-cart-content ${
                         isCartShow ? "mini-cart-content-toggle" : ""
                       }`}
@@ -246,7 +254,7 @@ class Header extends Component {
                       </div> */}
                     </div>
                   </div>
-                  <div className="header-wishlist-form-wrapper">
+                  {/* <div className="header-wishlist-form-wrapper">
                     <button
                       onClick={this.wishlistHandler}
                       className="wishlist-toggle-btn"
@@ -319,7 +327,7 @@ class Header extends Component {
                         <img src="/images/shop/mini-cart/bee2.png" alt="icon" />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <MobileMenu />
                 </div>
               </div>

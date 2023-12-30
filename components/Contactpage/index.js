@@ -42,7 +42,7 @@ const Contactpage = () => {
                         </div>
                     </div>
                     <div className="col col-lg-6 col-12">
-                        <div className="contact-form-area">
+                        <div className="contact-form-area" style={{marginRight:"20px"}}>
                             <div className="section-title-s3 section-title-s5">
                                 <h2>Quick Contact Form</h2>
                             </div>

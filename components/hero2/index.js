@@ -50,9 +50,9 @@ const Hero2 = () => {
                       width={"250px"}
                     />
                   </div>
-                  <div className={`btns`} style={{ marginBottom: "10px" }}>
-                    <Link href="/shop" className="btn theme-btn">
-                      Shop Now <i className="fa fa-angle-double-right"></i>
+                  <div className={`btns ${styles.button}`} style={{ marginBottom: "10px", marginLeft:"42px" }}>
+                    <Link href="/shop" className={`btn theme-btn ${styles.shop_now_link}`} style={{width:"211px"}}>
+                      Shop Now 
                     </Link>
                   </div>
                 </div>

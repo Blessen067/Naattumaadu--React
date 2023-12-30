@@ -21,7 +21,7 @@ const About = (props) => {
                                     <VideoModal />
                                 </div>000000
                             </div>
-                            <img src="images/spoon.png" alt="" />
+                            <img src="/spoon.png" alt="" />
                         </div>
                         <div className="col col-lg-6 col-12">
                             <div className="about-area">

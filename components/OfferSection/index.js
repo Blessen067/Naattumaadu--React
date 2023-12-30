@@ -40,7 +40,7 @@ const OfferSection = (props) => {
                     {featureProduct[0]?.name} <span></span> <br />
                   </h2>
                 </div>
-                <p>{featureProduct[0]?.description}</p>
+                <p style={{textAlign:"justify"}}>{featureProduct[0]?.description}</p>
                 <Link
                   href="/product-single/[slug]"
                   as={`/product-single/${featureProduct[0]?.id}`}

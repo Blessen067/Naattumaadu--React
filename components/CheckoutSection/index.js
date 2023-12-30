@@ -50,7 +50,7 @@ const CheckoutSection = ({ cartList }) => {
   // states
   const [tabs, setExpanded] = React.useState({
     cupon: false,
-    billing_adress: false,
+    billing_adress: true,
     payment: true,
   });
   const [forms, setForms] = React.useState({
@@ -89,7 +89,7 @@ const CheckoutSection = ({ cartList }) => {
   function faqHandler(name) {
     setExpanded({
       cupon: false,
-      billing_adress: false,
+      billing_adress: true,
       payment: true,
       [name]: !tabs[name],
     });
@@ -207,7 +207,7 @@ const CheckoutSection = ({ cartList }) => {
         <Grid className="container" container spacing={3}>
           <Grid item md={6} xs={12}>
             <div className="check-form-area">
-              <Grid className="cuponWrap checkoutCard">
+              {/* <Grid className="cuponWrap checkoutCard">
                 <Button
                   className="collapseBtn"
                   fullWidth
@@ -232,7 +232,7 @@ const CheckoutSection = ({ cartList }) => {
                     </form>
                   </Grid>
                 </Collapse>
-              </Grid>
+              </Grid> */}
               <Grid className="cuponWrap checkoutCard">
                 <Button
                   className="collapseBtn"

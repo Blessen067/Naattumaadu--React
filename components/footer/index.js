@@ -9,7 +9,7 @@ const Footer = (props) => {
   };
 
   return (
-    <footer className="tp-site-footer">
+    <footer className="tp-site-footer" style={{ background: "#61200D" }}>
       <div className="tp-upper-footer">
         <div className="container-fluid">
           <div className="row">
@@ -27,41 +27,32 @@ const Footer = (props) => {
                 </p>
                 <ul>
                   <li>
-                  {social?.facebook && (
-                    <Link onClick={ClickHandler} href={social.facebook}>
-                      <i className="ti-facebook"></i>
-                    </Link>
-                  )}
+                    {social?.facebook && (
+                      <Link onClick={ClickHandler} href={social.facebook}>
+                        <i className="ti-facebook"></i>
+                      </Link>
+                    )}
                   </li>
                   <li>
-                  {social?.twitter && (
-                    <Link
-                      onClick={ClickHandler}
-                      href={social.twitter}
-                    >
-                      <i className="ti-twitter-alt"></i>
-                    </Link>
-                  )}
+                    {social?.twitter && (
+                      <Link onClick={ClickHandler} href={social.twitter}>
+                        <i className="ti-twitter-alt"></i>
+                      </Link>
+                    )}
                   </li>
                   <li>
-                  {social?.instagram && (
-                    <Link
-                      onClick={ClickHandler}
-                      href={social?.instagram}
-                    >
-                      <i className="ti-instagram"></i>
-                    </Link>
-                  )}
+                    {social?.instagram && (
+                      <Link onClick={ClickHandler} href={social?.instagram}>
+                        <i className="ti-instagram"></i>
+                      </Link>
+                    )}
                   </li>
                   <li>
-                  {social?.google && (
-                    <Link
-                      onClick={ClickHandler}
-                      href={social?.google}
-                    >
-                      <i className="ti-google"></i>
-                    </Link>
-                  )}
+                    {social?.google && (
+                      <Link onClick={ClickHandler} href={social?.google}>
+                        <i className="ti-google"></i>
+                      </Link>
+                    )}
                   </li>
                 </ul>
               </div>
@@ -70,7 +61,7 @@ const Footer = (props) => {
               <div className=" link-widget">
                 <div className="">
                   <h3 style={{ color: "white", textTransform: "uppercase" }}>
-                    Support{" "}
+                    Other Links{" "}
                   </h3>
                 </div>
 
@@ -80,11 +71,7 @@ const Footer = (props) => {
                   </li>
                   <li>
                     <Link href="refund">Refund Policy</Link>
-                  </li>
-                  <li>
-                    {" "}
-                    <Link href="contact">Contact Us</Link>
-                  </li>
+                  </li>             
                   <li>
                     {" "}
                     <Link href="privacy">Privacy Policy</Link>
@@ -92,6 +79,10 @@ const Footer = (props) => {
                   <li>
                     {" "}
                     <Link href="shop">Shipping</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link href="contact">Contact Us</Link>
                   </li>
                   <li>
                     {" "}
@@ -130,12 +121,13 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
-      <div className="tp-lower-footer">
+      <div className="tp-lower-footer" style={{background:"#4b1b0d"}}>
         <div className="container">
           <div className="row">
             <div className="col col-xs-12">
-              <Link href={"/"}>
-                COPYRIGHT BY NAATTUMAADU DESIGNED BY ORANGE MEGA SOFTWARES - 2023{" "}
+              <Link href={"/"} style={{color:"white", fontSize:"12px"}}>
+                COPYRIGHT BY NAATTUMAADU DESIGNED BY OMS -
+                2023{" "}
               </Link>
             </div>
           </div>

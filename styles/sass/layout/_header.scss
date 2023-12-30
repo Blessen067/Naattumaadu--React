@@ -494,13 +494,13 @@
 			position: relative;
 			margin-right: 22px;
 
-			@include media-query(767px) {
-				margin-right: 10px;
-			}
+			// @include media-query(767px) {
+			// 	margin-right: 10px;
+			// }
 
-			@media(max-width:450px){
-				margin-right: 5px;
-			}
+			// @media(max-width:450px){
+			// 	margin-right: 5px;
+			// }
 		}
 
 		> div:last-child {

@@ -777,18 +777,18 @@
 	.grid{
         .project-inner{
             position: relative;
-            .hover-content  {
-                background: transparentize($theme-secondary-color, 0.1);
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                opacity: 0;
-                -webkit-transform: scale(0.7,0.7);
-                transform: scale(0.7,0.7);
-                @include transition-time(0.5s);
-            }
+            // .hover-content  {
+            //     background: transparentize($theme-secondary-color, 0.1);
+            //     width: 100%;
+            //     height: 100%;
+            //     position: absolute;
+            //     left: 0;
+            //     top: 0;
+            //     opacity: 0;
+            //     -webkit-transform: scale(0.7,0.7);
+            //     transform: scale(0.7,0.7);
+            //     @include transition-time(0.5s);
+            // }
         }
     } 
 
