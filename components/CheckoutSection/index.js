@@ -113,7 +113,7 @@ const CheckoutSection = ({ cartList }) => {
   const quantityString = quantity.join(", ");
 
   const handleSubmit = async (e) => {
-    dispatch(clearCart());
+    // dispatch(clearCart());
     e.preventDefault();
 
     const userData = {
@@ -308,7 +308,7 @@ const CheckoutSection = ({ cartList }) => {
                             </Select>
                           </FormControl>
                         </Grid> */}
-                        <Grid item sm={12} xs={12}>
+                        {/* <Grid item sm={12} xs={12}>
                           <TextField
                             fullWidth
                             label="District"
@@ -321,7 +321,7 @@ const CheckoutSection = ({ cartList }) => {
                             }}
                             className="formInput radiusNone"
                           />
-                        </Grid>
+                        </Grid> */}
                         <Grid item xs={12}>
                           <TextField
                             fullWidth
@@ -330,6 +330,7 @@ const CheckoutSection = ({ cartList }) => {
                             label="Address"
                             name="address"
                             value={forms.address}
+                            required
                             onChange={(e) => changeHandler(e)}
                             type="text"
                             InputLabelProps={{
@@ -357,6 +358,7 @@ const CheckoutSection = ({ cartList }) => {
                             fullWidth
                             label="Email Adress"
                             name="email"
+                            required
                             value={forms.email}
                             onChange={(e) => changeHandler(e)}
                             type="email"

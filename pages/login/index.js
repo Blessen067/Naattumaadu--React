@@ -9,14 +9,16 @@ import Checkbox from "@mui/material/Checkbox";
 import { useRouter } from 'next/router'
 import Footer from '../../components/footer'
 import Navbar from '../../components/Navbar/index';
-
+import { useDispatch } from 'react-redux';
 import Link from "next/link";
 import { login } from '../../utils/api';
+import { clearCart } from "../../store/actions/action";
 
 
 const LoginPage = (props) => {
 
     const router = useRouter()
+    const dispatch = useDispatch();
 
 
     const [value, setValue] = useState({
@@ -59,9 +61,11 @@ const LoginPage = (props) => {
 
             try {
                 const userData = await login(email, password);
-                console.log('Login successful:', userData.userdetails);
-
-                router.push('/');
+                console.log('Login successful:', userData.status);
+                if (userData.status === true) {
+                    dispatch(clearCart());
+                    router.push('/');
+                }
             } catch (error) {
                 toast.error(error.message);
             }

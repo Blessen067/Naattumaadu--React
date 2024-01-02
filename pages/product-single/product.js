@@ -7,13 +7,13 @@ import 'react-medium-image-zoom/dist/styles.css'
 import Link from 'next/link'
 const Product = ({ item, addToCart }) => {
   const [qty, setQty] = useState(1);
-  const [selectedSize, setSelectedSize] = useState(null); // New state for selected size
+  const [selectedSize, setSelectedSize] = useState(); // New state for selected size
   const [totalPrices, setTotalPrices] = useState(item.price);
   
   const calculateTotalPrice = () => {
     const basePrice = item.price;
-    const totalPrices = basePrice * qty;
-    setTotalPrices(totalPrices);
+    const totalPrices =  selectedSize * qty;
+    setTotalPrices(selectedSize ? totalPrices: basePrice * qty);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Product = ({ item, addToCart }) => {
 
   // Function to handle size selection
   const handleSizeChange = (size) => {
-    setSelectedSize(size);
+    setSelectedSize(size.price);
     // Calculate total price based on the selected size and quantity
     const totalPrices = size.price * qty;
     setTotalPrices(totalPrices);
