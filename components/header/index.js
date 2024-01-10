@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Link from "next/link";
 import Router from "next/router";
-import { totalPrice } from "../../utils";
+import { ProducttotalPrice, totalPrice } from "../../utils";
 import MobileMenu from "../MobileMenu";
 import { removeFromCart, removeFromWishList } from "../../store/actions/action";
 import styles from "../../styles/naMa.module.css";
@@ -230,7 +230,7 @@ class Header extends Component {
                       </div>
                       <div className="mini-cart-action clearfix">
                         <span className="mini-checkout-price">
-                          Total: ₹{totalPrice(carts)}
+                          Total: ₹{ProducttotalPrice(carts)}
                         </span>
                         <div className="mini-btn">
                           <Link

@@ -12,6 +12,12 @@ function totalPrice(items) {
     }, 0);
 }
 
+function ProducttotalPrice(items) {
+    return items.reduce((itemAcc, item) => {
+        return itemAcc += (item.price);
+    }, 0);
+}
+
 function isWishListed(productId, wishList) {
     return wishList.findIndex(product => product.id === productId) !== -1;
 }
@@ -97,5 +103,6 @@ export {
     isEquals,
     minValueOne,
     getCompareList,
-    searchFilter
+    searchFilter,
+    ProducttotalPrice
 };

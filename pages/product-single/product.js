@@ -114,7 +114,7 @@ const Product = ({ item, addToCart }) => {
               </Grid>
               <button
                 className="theme-btn"
-                onClick={() => addToCart(item, qty, calculateTotalPrice())}
+                onClick={() => addToCart(item, qty, totalPrices)}
               >
                 Add to cart
               </button>

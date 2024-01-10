@@ -3,7 +3,7 @@ import {
   DECREMENT_QUANTITY,
   INCREMENT_QUANTITY,
   REMOVE_FROM_CART,
-  CLEAR_CART
+  CLEAR_CART,
 } from "../actions/type";
 import { minValueOne } from "../../utils";
 
@@ -15,49 +15,61 @@ export const cartReducer = (state = init, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       const productId = action.product.id;
+      const price = action.price;
+      console.log("red", price);
       const productQty = action.qty ? action.qty : 1;
-      if (state.cart.findIndex((product) => product.id === productId) !== -1) {
-        const cart = state.cart.reduce((cartAcc, product) => {
-          console.log("c", product);
 
-          if (product.id === productId) {
-            cartAcc.push({
+      // Check if the product is already in the cart
+      const existingProductIndex = state.cart.findIndex(
+        (product) => product.id === productId
+      );
+
+      if (existingProductIndex !== -1) {
+        const cart = state.cart.map((product, index) => {
+          if (index === existingProductIndex) {
+            // If the product is found, update the quantity without summing
+            return {
               ...product,
               selected_color: action.color,
               selected_size: action.size,
-              qty: product.qty ? product.qty + productQty : 1,
-              sum:
-                ((product.price * product.discount) / 100) *
-                (product.qty + productQty),
-            }); // Increment qty
+              qty: action.qty ? action.qty : product.qty + productQty,
+              price: price
+            };
           } else {
-            cartAcc.push(product);
+            return product;
           }
-
-          return cartAcc;
-        }, []);
+        });
 
         return { ...state, cart };
-      }
+      } else {
+        // If the product is not in the cart, add it with the specified quantity
+        const newProduct = {
+          ...action.product,
+          selected_color: action.color,
+          selected_size: action.size,
+          qty: action.qty ? action.qty : productQty,
+          price: price
+        };
 
-      return {
-        ...state,
-        cart: [
-          ...state.cart,
-          {
-            ...action.product,
-            selected_color: action.color,
-            selected_size: action.size,
-            qty: action.qty,
-            sum:
-              ((action.product.price * action.product.discount) / 100) *
-              action.qty,
-          },
-        ],
-      };
+        return { ...state, cart: [...state.cart, newProduct] };
+      }
+      // return {
+      //   ...state,
+      //   cart: [
+      //     ...state.cart,
+      //     {
+      //       ...action.product,
+      //       selected_color: action.color,
+      //       selected_size: action.size,
+      //       qty: action.qty,
+      //       sum:
+      //         ((action.product.price * action.product.discount) / 100) *
+      //         action.qty,
+      //     },
+      //   ],
+      // };
 
     case CLEAR_CART:
-      console.log("hh")
       return {
         cart: [],
       };

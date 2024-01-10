@@ -53,17 +53,14 @@ class ContactForm extends Component {
 
       toast.success("Message sucessfully send!");
 
-      this.setState({
+      setFormData({
         name: "",
+        phone: "",
         email: "",
-        subject: "",
-        events: "",
-        notes: "",
-        error: {},
+        message: "",
       });
     } catch (e) {
         toast.error("Can't send message try again later!");
-
     }
 
     if (error) {
